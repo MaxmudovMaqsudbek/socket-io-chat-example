@@ -1,0 +1,15 @@
+{
+  "name": "socketio-project-from-offc-docs",
+  "version": "1.0.0",
+  "description": "my socket io app from offical docs",
+  "license": "ISC",
+  "author": "Maqsudbek",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
