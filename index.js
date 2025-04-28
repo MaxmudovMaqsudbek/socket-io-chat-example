@@ -26,12 +26,16 @@ io.on('connection', (socket)=>{
     
 })
 
-io.on('connection', (socket)=>{
-    socket.on('chat message', (msg)=>{
-        console.log("message:"+" "+msg);
-        
-    })
-})
+io.on('connection', (socket) => {
+    socket.broadcast.emit('hi');
+  });
+
+io.on('connection', (socket) => {
+    socket.on('chat message', (msg) => {
+      io.emit('chat message', msg);
+    });
+  });
+
 
 server.listen(4020, ()=>{
     console.log("Server is running at http:localhost:4020");
